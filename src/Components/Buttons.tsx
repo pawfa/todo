@@ -7,7 +7,7 @@ export interface IProps {
     clear: ()=> void,
 }
 
-class ButtonsComponent extends React.Component<IProps,{}> {
+class ButtonsComponent extends React.Component<IProps> {
 
     public render() {
         const {add, remove, clear}  = this.props;
