@@ -1,6 +1,6 @@
 import * as React from 'react';
 import ButtonsComponent from "../Components/ButtonsComponent";
-import TodosContainer from "./TodosContainer";
+import TodoComponent from "../Components/TodoComponent";
 
 export interface IMainContainerState {
     data: string[];
@@ -14,8 +14,7 @@ class MainContainer extends React.Component<{}, IMainContainerState> {
     }
 
     public remove = () => {
-        this.setState(
-            {
+        this.setState({
                 data: this.state.data.slice(0, -1)
             }
         );
@@ -23,27 +22,26 @@ class MainContainer extends React.Component<{}, IMainContainerState> {
 
     public add = () => {
         const taskName = 'Task number ' + this.state.data.length;
-        this.setState(
-            {
+        this.setState({
                 data: [...this.state.data, taskName]
             }
         );
     };
 
     public clear = () => {
-        this.setState(
-            {
+        this.setState({
                 data: []
             }
         )
     };
 
-
     public render() {
         return (
             <div>
                 <ButtonsComponent add={this.add} remove={this.remove} clear={this.clear}/>
-                <TodosContainer data={this.state.data}/>
+                <div>
+                    {this.state.data.map((e) => <TodoComponent key={e} content={e}/>)}
+                </div>
             </div>
         );
     }
