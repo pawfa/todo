@@ -11,13 +11,13 @@ Recruitment task - simple todo application.
 
 To install this application, run the following commands:
 ```bash
-git clone https://github.com/pawfa/todoApp.git
-cd algorithms
+git clone https://github.com/pawfa/todo.git
+cd todo
 ```
 This will get a copy of the project installed locally.
 
 ### Executing program
-To run application, cd into the `algorithms` folder and run:
+To run application, cd into the `todo` folder and run:
  
 ```bash
 npm install && npm start
