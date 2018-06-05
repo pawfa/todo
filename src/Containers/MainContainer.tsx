@@ -1,12 +1,12 @@
 import * as React from 'react';
-import ButtonsComponent from "../Components/ButtonsComponent";
-import TodoComponent from "../Components/TodoComponent";
+import ButtonsComponent from "../Components/Buttons";
+import TodoComponent from "../Components/Todo";
 
-export interface IMainContainerState {
+export interface IState {
     data: string[];
 }
 
-class MainContainer extends React.Component<{}, IMainContainerState> {
+class MainContainer extends React.Component<{}, IState> {
 
     constructor(props: {}) {
         super(props);

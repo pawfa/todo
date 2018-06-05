@@ -1,13 +1,13 @@
 import * as React from 'react';
-import './ButtonsComponent.css';
+import './Buttons.css';
 
-export interface IButtonsComponentProps {
+export interface IProps {
     add: ()=> void,
     remove: ()=> void,
     clear: ()=> void,
 }
 
-class ButtonsComponent extends React.Component<IButtonsComponentProps,{}> {
+class ButtonsComponent extends React.Component<IProps,{}> {
 
     public render() {
         const {add, remove, clear}  = this.props;

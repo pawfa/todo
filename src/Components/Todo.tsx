@@ -1,10 +1,10 @@
 import * as React from 'react';
-import './TodoComponent.css';
+import './Todo.css';
 
 
-export interface ITodoComponentProps { content: string; }
+export interface IProps { content: string; }
 
-class TodoComponent extends React.Component<ITodoComponentProps> {
+class TodoComponent extends React.Component<IProps> {
 
     public render() {
         return (
