@@ -9,7 +9,7 @@ class TodoContainer extends React.Component<ITodoContainerProps> {
         const {data} = this.props;
         return (
             <div>
-                {data.map((e,i) => <TodoComponent key={i} content={e}/>)}
+                {data.map((e) => <TodoComponent key={e} content={e}/>)}
             </div>
         );
     }

@@ -8,7 +8,7 @@ class TodoComponent extends React.Component<ITodoComponentProps> {
 
     public render() {
         return (
-            <div className={'todo z-depth-1'}>
+            <div className={'todo z-depth-1 font-weight-normal'}>
                 {this.props.content}
             </div>
         );

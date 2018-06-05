@@ -19,7 +19,6 @@ class MainContainer extends React.Component<{}, IMainContainerState> {
                 data: this.state.data.slice(0, -1)
             }
         );
-
     };
 
     public add = () => {
