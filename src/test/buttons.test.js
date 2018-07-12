@@ -7,14 +7,14 @@ describe('TodoComponent', () =>{
 
   test('when clicked on button function is invoked',()=>{
     const actionSpy = jest.fn();
-    const toDo =shallow(
+    const buttons =shallow(
         <ButtonsComponent
             add={actionSpy}
             remove = {actionSpy}
             clear = {actionSpy}
         />
     );
-    toDo.find('.btn').forEach((node)=> {
+    buttons.find('.btn').forEach((node)=> {
       node.simulate('click');
       expect(actionSpy).toHaveBeenCalled();
     });
