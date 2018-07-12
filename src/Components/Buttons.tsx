@@ -7,10 +7,9 @@ export interface IProps {
     clear: ()=> void,
 }
 
-class ButtonsComponent extends React.Component<IProps> {
+ export const ButtonsComponent = (props:IProps) => {
 
-    public render() {
-        const {add, remove, clear}  = this.props;
+        const {add, remove, clear}  = props;
         return (
             <div className={'buttons'}>
                 <button value={'Add'} className={'btn btn-primary'} onClick={add}>Add</button>
@@ -18,7 +17,5 @@ class ButtonsComponent extends React.Component<IProps> {
                 <button value={'Clear'} className={'btn btn-primary'} onClick={clear}>Clear</button>
             </div>
         );
-    }
-}
 
-export default ButtonsComponent;
+};
