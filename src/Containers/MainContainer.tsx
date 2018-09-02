@@ -8,10 +8,9 @@ export interface IState {
 
 class MainContainer extends React.Component<{}, IState> {
 
-    constructor(props: {}) {
-        super(props);
-        this.state = {data: []};
-    }
+    public state = {
+        data: [],
+    };
 
     public remove = () => {
         this.setState({
@@ -34,13 +33,21 @@ class MainContainer extends React.Component<{}, IState> {
             }
         )
     };
+    public createTodos(){
+        return this.state.data.map((e) => <TodoComponent key={e} content={e}/>);
+    }
+
+    public shouldComponentUpdate(nextProps: any, nextState:any): boolean{
+
+        return this.state.data.length !== nextState.data.length;
+    }
 
     public render() {
         return (
             <div>
                 <ButtonsComponent add={this.add} remove={this.remove} clear={this.clear}/>
                 <div>
-                    {this.state.data.map((e) => <TodoComponent key={e} content={e}/>)}
+                    {this.createTodos()}
                 </div>
             </div>
         );
