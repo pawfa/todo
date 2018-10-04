@@ -1,7 +1,7 @@
 /* tslint:disable */
 import * as React from 'react';
 import './Todo.css';
-import {withStyle} from "./WithSpinner";
+import {withStyle} from "./WithStyle";
 
 export interface IProps{
     content: string;
