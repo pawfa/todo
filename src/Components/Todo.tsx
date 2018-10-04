@@ -1,12 +1,16 @@
+/* tslint:disable */
 import * as React from 'react';
 import './Todo.css';
+import {withStyle} from "./WithSpinner";
 
+export interface IProps{
+    content: string;
+}
 
-export interface IProps { content: string; }
-
-export class TodoComponent extends React.PureComponent<IProps>{
+class TodoComponent extends React.PureComponent<IProps>{
 
     public render(){
+    console.log(this.props);
         return (
             <div className={'todo z-depth-1 font-weight-normal'}>
                 {this.props.content}
@@ -15,3 +19,4 @@ export class TodoComponent extends React.PureComponent<IProps>{
     }
 
 }
+export const TodoWithStyle = withStyle(TodoComponent);

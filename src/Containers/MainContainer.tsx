@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ButtonsComponent} from "../Components/Buttons";
-import {TodoComponent} from "../Components/Todo";
+import {TodoWithStyle} from "../Components/Todo";
 
 export interface IState {
     data: string[];
@@ -34,7 +34,7 @@ class MainContainer extends React.Component<{}, IState> {
         )
     };
     public createTodos(){
-        return this.state.data.map((e) => <TodoComponent key={e} content={e}/>);
+        return this.state.data.map((e) => <TodoWithStyle key={e} content={e} />);
     }
 
     public shouldComponentUpdate(nextProps: any, nextState:any): boolean{
